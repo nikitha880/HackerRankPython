@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def doormatpattern(rows, colums):
+    
+
+    for i in range(rows//2):
+        pattern = ".|." * (2*i+1)
+        print(pattern.center(colums, "-"))
+        
+    print("WELCOME".center(colums, "-"))
+        
+    for i in reversed(range(rows//2)):
+        pattern = ".|." * (2*i+1)
+        print(pattern.center(colums, "-"))
+ 
+# '9', '27' -> 9, 27
+rows,colums = map(int, input().split())
+#rows,colums = input().split()
+# rows = int(rows)
+# colums = int(colums)
+         
+doormatpattern(rows,colums)
+
